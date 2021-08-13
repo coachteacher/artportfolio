@@ -1,0 +1,192 @@
+/** Elements **/
+    body{
+        font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    }
+    h1{
+        font-size: 4rem;
+        padding-left:.5%;
+    }
+    ul{
+        position: absolute;
+        float:left;
+        padding-left:20px;
+        margin-top: 0%;
+        list-style: none;
+        font-size: 1.3em;
+        font-weight: 100;
+        color:#6d6d6d;
+    }
+    button{
+        z-index:0;
+    }
+        /** Class **/
+        
+    .gridimg{
+        width: 100%;
+    }
+    .imggrid{ 
+        display:grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-row-gap: 4%;
+        grid-column-gap:5%;
+        padding-left:200px;
+        padding-right:5%;
+        }
+    .modal{
+        display:none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background-color: rgba(133, 133, 133, 0.562);
+    }
+    .modal-content{
+        background-color:white;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        padding:10px;
+        width: 86%;
+        height: 90vh;
+        border-radius: 5px;
+        animation-name: open-modal;
+        animation-duration: 0.5s;
+        
+    }
+    .closeBtn{
+        color: rgba(211, 211, 211, 0.644);
+        float: right;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .slide{  
+        height: 98%;
+        padding: 1%;
+        margin-left:auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+    }
+    .arrow{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    .arrow-left{
+        border-width: 30px 25px 30px 0;
+        border-color: transparent rgba(105, 105, 105, 0.548) transparent transparent;
+        left: 0;
+        margin-left: 15px;
+    }
+    .arrow-right{
+        border-width: 30px 0 30px 25px;
+        border-color: transparent  transparent transparent rgba(105, 105, 105, 0.548);
+        right: 0;
+        margin-right: 15px;
+    }
+    .image{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        max-width: 900px;
+    }
+    .buttonInfo{
+        position: absolute;
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        color: transparent;
+        z-index: 2;
+        margin-top: 95px;
+        margin-left: 20px;
+    }
+        /** IDs **/
+
+    #modalBtn{
+        position: absolute;
+        width: 350px;
+        height: 290px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://benjaminrogersart.files.wordpress.com/2021/08/critique.jpg);
+    }
+    #modalBtn2{
+        position: absolute;
+        margin-left: 400px;
+        width: 350px;
+        height: 292px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://benjaminrogersart.files.wordpress.com/2021/08/distiction.jpg?w=350);
+    }
+    #recentDrawings{
+        margin-left: 350px;
+    }
+        /** Media Queeries **/
+    @media(min-width:1200px){
+        .imggrid{
+            grid-template-columns: 23% 23% 23% 23%;
+            grid-column-gap:4%;
+            }
+        }
+        
+    @media (max-width:770px){
+        ul{
+                padding-left:10px;
+                font-size: 1em;
+            }
+        h1{
+                font-size: 3rem;
+            }
+        .imggrid{
+                grid-template-columns: 48% 48%;
+                grid-column-gap:4%;
+                padding-left: 100px;
+            }
+        }
+        
+        /** PsuedoClass **/
+        
+    a:hover{
+        opacity:.6;
+    }
+    a:visited{
+        color: #6d6d6d;
+        text-decoration:none;
+    }
+    a:link{
+        color: #6d6d6d;
+        text-decoration:none;
+    }
+    .button:hover{
+        cursor: pointer;
+        opacity:0.6;
+    }
+    {
+    }
+    .closeBtn:hover, .closeBtn:focus, .buttonInfo:hover, .buttonInfo:hover{
+        cursor: pointer;
+        color: black;
+    }
+    .arrow-right:hover, .arrow-right:focus{
+        border-color: transparent  transparent transparent black;
+    }
+    .arrow-left:hover, .arrow-left:focus{
+        border-color: transparent  black transparent transparent;
+    }
+
+         /* Key Frames */
+    @keyframes open-modal{
+        from{opacity:0;}
+        to{opacity:1;}
+    }
+
+
+   
+
+   
