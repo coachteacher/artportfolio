@@ -54,6 +54,30 @@
         animation-duration: 0.5s;
         
     }
+
+    .category-gallery li {
+        position: relative;
+    }
+    .category-gallery li:hover img {
+        opacity: 0.5;
+    }
+    .category-gallery li:hover h4 {
+        color: black;
+    }
+    .category-gallery li img {
+        display: block;
+    }
+    .category-gallery li h4 {
+       position:absolute;
+       display: block;
+       width: 100%;
+       height: 100%;
+       left: 0;
+       top: 0;
+       margin: 0;
+       text-align:center;
+
+    }
     .closeBtn{
         color: rgba(211, 211, 211, 0.644);
         float: right;
