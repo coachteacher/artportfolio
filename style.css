@@ -5,6 +5,7 @@
     h1{
         font-size: 4rem;
         padding-left:.5%;
+        position: fixed;
     }
     ul{
         position: absolute;
@@ -12,27 +13,34 @@
         padding-left:20px;
         margin-top: 0%;
         list-style: none;
-        font-size: 1.3em;
-        font-weight: 100;
+    }
+    a{
         color:#6d6d6d;
+        text-decoration: none;
+        font-size: 16pt;
+        font-weight: 500;
     }
-    button{
-        z-index:0;
+
+      /** Class **/
+    .links{
+        position: fixed;
+        margin-top: 150px
     }
-        /** Class **/
-        
-    .gridimg{
-        width: 100%;
+    .button{
+        position: relative;
+        display:flex;
+        justify-content:center;
+        align-items: center;
     }
-    .imggrid{ 
+    .primary-content-grid{
+        margin-top: 150px;
         display:grid;
-        grid-template-columns: 30% 30% 30%;
-        grid-row-gap: 4%;
-        grid-column-gap:5%;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 50px;
+        grid-column-gap:30px;
         padding-left:200px;
-        padding-right:5%;
         }
-    .modal{
+    .modal, .modal2{
         display:none;
         position: fixed;
         width: 100%;
@@ -40,8 +48,9 @@
         left: 0;
         top: 0;
         background-color: rgba(133, 133, 133, 0.562);
+        z-index: 100;
     }
-    .modal-content{
+    .modal-content, .modal-content2{
         background-color:white;
         margin-top: 30px;
         margin-left: auto;
@@ -52,20 +61,12 @@
         border-radius: 5px;
         animation-name: open-modal;
         animation-duration: 0.5s;
-        
     }
-    .closeBtn{
+    .closeBtn, .closeBtn2{
         color: rgba(211, 211, 211, 0.644);
         float: right;
         font-size: 30px;
         margin-right: 10px;
-    }
-    .slide{  
-        height: 98%;
-        padding: 1%;
-        margin-left:auto;
-        margin-right: auto;
-        background-repeat: no-repeat;
     }
     .arrow{
         cursor: pointer;
@@ -98,36 +99,66 @@
     .buttonInfo{
         position: absolute;
         font-family: sans-serif;
-        font-size: 40px;
+        font-size: 37px;
         font-weight: 700;
         color: transparent;
-        z-index: 2;
-        margin-top: 95px;
-        margin-left: 20px;
+        margin: 0;
+    }
+    .image-info{
+        padding-left: 5%;
+    }
+    .about-paragraph{
+        padding-left: 200px;
+        width: 70vw;
+        max-width: 950px;
     }
         /** IDs **/
+    #about-photo{
+        position:relative;
+        padding-left: 200px;
+        width: 70vw;
+        max-width:950px;
+        margin-top:1000px;
+    }
+    #heading{
+        position: fixed;
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        z-index: 2;
+        opacity: 1;
+        top:0;
+        left:0;
+    }
+        /** PsuedoClass **/
+        
+    a:hover{
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    a:visited{
+        text-decoration: none;
+        color:#6d6d6d; 
+    }
+    .button:hover .buttonImg{
+        cursor: pointer;
+        opacity:0.6;
+    }
+    .primary-content-grid .button:hover .buttonInfo{
+        color:black;
+    }
+    .closeBtn:hover{
+        cursor: pointer;
+        color: black;
+    }
+    .arrow-right:hover, .arrow-right:focus{
+        border-color: transparent  transparent transparent black;
+    }
+    .arrow-left:hover, .arrow-left:focus{
+        border-color: transparent  black transparent transparent;
+    }
 
-    #modalBtn{
-        position: absolute;
-        width: 350px;
-        height: 290px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(https://benjaminrogersart.files.wordpress.com/2021/08/critique.jpg);
-    }
-    #modalBtn2{
-        position: absolute;
-        margin-left: 400px;
-        width: 350px;
-        height: 292px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(https://benjaminrogersart.files.wordpress.com/2021/08/distiction.jpg?w=350);
-    }
-    #recentDrawings{
-        margin-left: 350px;
-    }
-        /** Media Queeries **/
+         /** Media Queeries **/
     @media(min-width:1200px){
         .imggrid{
             grid-template-columns: 23% 23% 23% 23%;
@@ -149,37 +180,6 @@
                 padding-left: 100px;
             }
         }
-        
-        /** PsuedoClass **/
-        
-    a:hover{
-        opacity:.6;
-    }
-    a:visited{
-        color: #6d6d6d;
-        text-decoration:none;
-    }
-    a:link{
-        color: #6d6d6d;
-        text-decoration:none;
-    }
-    .button:hover{
-        cursor: pointer;
-        opacity:0.6;
-    }
-    {
-    }
-    .closeBtn:hover, .closeBtn:focus, .buttonInfo:hover, .buttonInfo:hover{
-        cursor: pointer;
-        color: black;
-    }
-    .arrow-right:hover, .arrow-right:focus{
-        border-color: transparent  transparent transparent black;
-    }
-    .arrow-left:hover, .arrow-left:focus{
-        border-color: transparent  black transparent transparent;
-    }
-
          /* Key Frames */
     @keyframes open-modal{
         from{opacity:0;}
