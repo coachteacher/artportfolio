@@ -1,16 +1,18 @@
 window.onload = function(){   
     //clicking to get the lightbox
     const modal = document.getElementById('simpleModal');
-    const modal2 = document.getElementById('simpleModal2')
+    const modal2 = document.getElementById('simpleModal2');
     const modalBtn = document.getElementById('modalBtn');
-    const modalBtn2 = document.getElementById('modalBtn2')
+    const modalBtn2 = document.getElementById('modalBtn2');
     const closeBtn = document.querySelector('.closeBtn');
+    const closeBtn2 = document.querySelector('.closeBtn2');
     
 
     modalBtn.addEventListener('click', openModal);
-    modalBtn2.addEventListener('click', openModal2)
+    modalBtn2.addEventListener('click', openModal2);
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', clickOutside);
+    closeBtn2.addEventListener('click', closeModal);
 
         function openModal(){
             modal.style.display = "block";
@@ -27,6 +29,8 @@ window.onload = function(){
         function clickOutside(e){
             if(e.target == modal){
             modal.style.display = "none";
+            }else if(e.target == modal2){
+            modal2.style.display = "none";
             }
         }
     
