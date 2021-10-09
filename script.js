@@ -1,36 +1,90 @@
-window.onload = function(){   
+window.onload = function(){  
+    const portfolioSection = document.getElementById('portfolioSection');
+    const aboutSection = document.getElementById('aboutSection');
+    const cvSection = document.getElementById('cvSection');
+    const contactSection = document.getElementById('contactSection');
+    const portfolioLink = document.getElementById('portfolioSectionLink');
+    const aboutLink = document.getElementById('aboutSectionLink');
+    const cvLink = document.getElementById('cvSectionLink');
+    const contactLink = document.getElementById('contactSectionLink');
+    const currentPaintLink = document.getElementById('paintingsLink');
+    const currentDrawLink = document.getElementById('drawingsLink');
+    const olderWorkLink = document.getElementById('oldWorkLink');
+    const studiesLink = document.getElementById('studiesLink');
+    const currentPaintGallery = document.getElementById('currentPaintingLightBox');
+    const currentDrawGallery = document.getElementById('currentDrawingLightBox');
+    const olderWorkGallery = document.getElementById('olderWorkLightBox');
+    const studiesGallery = document.getElementById('studiesLightBox');
+    
+    //event listeners
+    portfolioLink.addEventListener('click', () =>{
+        portfolioSection.style.visibility = 'visible';
+        aboutSection.style.visibility = 'hidden';
+        cvSection.style.visibility = 'hidden';
+        contactSection.style.visibility = 'hidden';
+    })
+    aboutLink.addEventListener('click', () =>{
+        portfolioSection.style.visibility = 'hidden';
+        aboutSection.style.visibility = 'visible';
+        cvSection.style.visibility = 'hidden';
+        contactSection.style.visibility = 'hidden';
+    })
+    cvLink.addEventListener('click', () =>{
+        portfolioSection.style.visibility = 'hidden';
+        aboutSection.style.visibility = 'hidden';
+        cvSection.style.visibility = 'visible';
+        contactSection.style.visibility = 'hidden';
+    })
+    contactLink.addEventListener('click', () =>{
+        portfolioSection.style.visibility = 'hidden';
+        aboutSection.style.visibility = 'hidden';
+        cvSection.style.visibility = 'hidden';
+        contactSection.style.visibility = 'visible';
+    })
+    currentPaintLink.addEventListener('click', () => {
+        currentPaintGallery.style.visibility = 'visible';
+        portfolioSection.style.visibility = 'hidden';
+    })
+    currentDrawLink.addEventListener('click', () =>{
+        currentDrawGallery.style.visibility = 'visible';
+        portfolioSection.style.visibility = 'hidden';
+    })
+    olderWorkLink.addEventListener('click', () => {
+        olderWorkGallery.style.visibility = 'visible';
+        portfolioSection.style.visibility = 'hidden';
+    })
+    studiesLink.addEventListener('click', () =>{
+        studiesGallery.style.visibility = 'visible';
+        portfolioSection.style.visibility = 'hidden';
+    })
+
+
+
+
+
+
+    /*
     //clicking to get the lightbox
     const modal = document.getElementById('simpleModal');
-    const modal2 = document.getElementById('simpleModal2');
     const modalBtn = document.getElementById('modalBtn');
-    const modalBtn2 = document.getElementById('modalBtn2');
     const closeBtn = document.querySelector('.closeBtn');
-    const closeBtn2 = document.querySelector('.closeBtn2');
     
 
     modalBtn.addEventListener('click', openModal);
-    modalBtn2.addEventListener('click', openModal2);
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', clickOutside);
-    closeBtn2.addEventListener('click', closeModal);
 
         function openModal(){
             modal.style.display = "block";
         }
         
-        function openModal2(){
-            modal2.style.display ="block";
-        }
         function closeModal(){
             modal.style.display = "none";
-            modal2.style.display = "none"
         }
 
         function clickOutside(e){
             if(e.target == modal){
             modal.style.display = "none";
-            }else if(e.target == modal2){
-            modal2.style.display = "none";
             }
         }
     
@@ -82,5 +136,5 @@ window.onload = function(){
         slideRight();
     });
     
-    startSlide();
+    startSlide();*/
 };

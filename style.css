@@ -1,198 +1,198 @@
-/** Elements **/
-    body{
-        font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    }
-    h1{
-        font-size: 4rem;
-        padding-left:.5%;
-        position: fixed;
-    }
-    ul{
-        position: absolute;
-        float:left;
-        padding-left:20px;
-        margin-top: 0%;
-        list-style: none;
-    }
-    a{
-        color:#6d6d6d;
-        text-decoration: none;
-        font-size: 16pt;
-        font-weight: 500;
-    }
+/** page wide elements **/
+*{
+    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+h1{
+    font-size: 4rem;
+    padding-left:.5%;
+    position: fixed;
+}
+#heading{
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    z-index: 2;
+    opacity: 1;
+    top:0;
+    left:0;
+}
+.main-image img{
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 67%;
+}
+.main-image p{
+    float: right;
+}
+.images img{
+    width: 100%;
+}
+.images{
+    margin-left: 2%;
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 5px;
+}
+.light-box{
+    width: 80vw;
+    height: 83vh;
+    background-color: rgba(240, 240, 240);
+}
+/** Page Navigation **/
+.links{
+    position: absolute;
+    margin-top: 150px;
+    list-style-type: none;
+    text-decoration: none;
+}
+.navLinks{
+    border: none;
+    background: none;
+    font-size: 1em;
+}
+.navLinks:hover{
+    cursor: pointer;
+}
 
-      /** Class **/
-    .links{
-        position: fixed;
-        margin-top: 150px
-    }
-    .button{
-        position: relative;
-        display:flex;
-        justify-content:center;
-        align-items: center;
-    }
-    .primary-content-grid{
-        margin-top: 150px;
-        display:grid;
-        grid-template-columns: 50% 50%;
-        grid-row-gap: 50px;
-        grid-column-gap:30px;
-        padding-left:200px;
-        }
-    .modal, .modal2{
-        display:none;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        left: 0;
-        top: 0;
-        background-color: rgba(133, 133, 133, 0.562);
-        z-index: 100;
-    }
-    .modal-content, .modal-content2{
-        background-color:white;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        padding:10px;
-        width: 86%;
-        height: 90vh;
-        border-radius: 5px;
-        animation-name: open-modal;
-        animation-duration: 0.5s;
-    }
-    .closeBtn, .closeBtn2{
-        color: rgba(211, 211, 211, 0.644);
-        float: right;
-        font-size: 30px;
-        margin-right: 10px;
-    }
-    .arrow{
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        margin-top: -30px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-    }
-    .arrow-left{
-        border-width: 30px 25px 30px 0;
-        border-color: transparent rgba(105, 105, 105, 0.548) transparent transparent;
-        left: 0;
-        margin-left: 15px;
-    }
-    .arrow-right{
-        border-width: 30px 0 30px 25px;
-        border-color: transparent  transparent transparent rgba(105, 105, 105, 0.548);
-        right: 0;
-        margin-right: 15px;
-    }
-    .image{
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 95%;
-        max-width: 900px;
-    }
+/**portfolio grid**/
+#portfolioList{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 30px;
+    grid-column-gap: 40px;
+}
+#portfolioSection{
+    position: absolute;
+    visibility: visible;
+    margin-top: 150px;
+    margin-left: 200px;
+    max-width: 850px;
+}
+.portfolioLinks{
+    text-align: center;
+    color: transparent;
+    font-size: 3vw;
+    font-weight: 700;
+    max-width: 450px;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonInfo{
+    position: absolute;
+    margin:0;
+}
+#recentPaintingsLink{
+    width: 24vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 290px;
+}
+#recentDrawingsLink{
+    width: 24vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 292px;
+}
+#olderWorkLink{
+    width: 30vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 232px;
+}
+#studiesLink{
+    width: 24vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 290px;
+}
+#portfolioList li:hover .button-image{
+    opacity: .5;
+    cursor: pointer;
+}
+#portfolioList .portfolioLinks:hover .buttonInfo{
+    color: black;
+}
+.buttonInfo:hover{
+    cursor: pointer;
+}
+
+/* about section */
+#about-paragraph{
+    margin-top: 50px;
+    margin-left: 200px;
+    width: 70vw;
+    max-width: 950px;
+}
+#aboutSection{
+    visibility: hidden;
+}
+#about-photo{
+    position: relative;
+    width: 60%;
+    margin-top: 150px;
+    margin-left: 200px;
+}
+
+#cvSection{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+
+/* contact section */
+#contactSection{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    font-size: 1.2em;
+}
+.contact-photo{
+    position: relative;
+    width: 72%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*current paintings gallery */
+#currentPaintingLightBox{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 180px;
+}
+
+/*current drawings gallery*/
+#currentDrawingLightBox{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 180px;
+}
+/*older work gallery*/
+#olderWorkLightBox{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 180px;
+}
+/*studies gallery*/
+#studiesLightBox{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 180px;
+}
+/**media queries**/
+@media only screen and (min-width: 1425px){
     .buttonInfo{
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 37px;
-        font-weight: 700;
-        color: transparent;
-        margin: 0;
+        font-size: 30pt;
     }
-    .image-info{
-        padding-left: 5%;
-    }
-    .about-paragraph{
-        padding-left: 200px;
-        width: 70vw;
-        max-width: 950px;
-    }
-    .slide12{
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 850px;
-    }
-        /** IDs **/
-    #about-photo{
-        position:relative;
-        padding-left: 200px;
-        width: 70vw;
-        max-width:950px;
-        margin-top:1000px;
-    }
-    #heading{
-        position: fixed;
-        width: 100%;
-        height: 150px;
-        background-color: white;
-        z-index: 2;
-        opacity: 1;
-        top:0;
-        left:0;
-    }
-        /** PsuedoClass **/
-        
-    a:hover{
-        cursor: pointer;
-        opacity: 0.6;
-    }
-    a:visited{
-        text-decoration: none;
-        color:#6d6d6d; 
-    }
-    .button:hover .buttonImg{
-        cursor: pointer;
-        opacity:0.6;
-    }
-    .primary-content-grid .button:hover .buttonInfo{
-        color:black;
-    }
-    .closeBtn:hover, .closeBtn2:hover{
-        cursor: pointer;
-        color: black;
-    }
-    .arrow-right:hover, .arrow-right:focus{
-        border-color: transparent  transparent transparent black;
-    }
-    .arrow-left:hover, .arrow-left:focus{
-        border-color: transparent  black transparent transparent;
-    }
-
-         /** Media Queeries **/
-    @media(min-width:1200px){
-        .imggrid{
-            grid-template-columns: 23% 23% 23% 23%;
-            grid-column-gap:4%;
-            }
-        }
-        
-    @media (max-width:770px){
-        ul{
-                padding-left:10px;
-                font-size: 1em;
-            }
-        h1{
-                font-size: 3rem;
-            }
-        .imggrid{
-                grid-template-columns: 48% 48%;
-                grid-column-gap:4%;
-                padding-left: 100px;
-            }
-        }
-         /* Key Frames */
-    @keyframes open-modal{
-        from{opacity:0;}
-        to{opacity:1;}
-    }
-
-
-   
-
-   
+}

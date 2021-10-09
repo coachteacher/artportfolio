@@ -1,188 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Benjamin Rogers Painting Portfolio</title>
-	<link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<title>Benjamin Rogers Painting Portfolio</title> 
+	<link rel="stylesheet" href="style-copy.css">
+    <script src="script-copy.js"></script>
 </head>
 <body>
     <div id="heading">
 	<h1 id="title">Benjamin Rogers Art</h1>
     </div>
+    <div id="linkDiv">
         <ul class="links">
-            <li><a href="#portfolioSection">portfolios</a></li>
-            <li><a href="#aboutSection">about</a></li>
-            <li><a href="cv">c/v</a></li>
-            <li><a href="contact">contact</a></li>
+            <li><button class="navLinks" id="portfolioSectionLink">portfolios</button></li>
+            <li><button class="navLinks" id="aboutSectionLink">about</button></li>
+            <li><button class="navLinks" id="cvSectionLink">c/v</button></li>
+            <li><button class="navLinks" id="contactSectionLink">contact</button></li>
         </ul>
-	<section id="portfolioSection">
-    <!--first gallery thumnail modal-->
-    <ul class="primary-content-grid">
-        <li id="modalBtn" class="button">
-            <img src="https://benjaminrogersart.files.wordpress.com/2021/08/critique.jpg" class="buttonImg">
-        <span class="buttonInfo" id="recentPaintings">recent paintings</span> 
-        </li>
-        <li id="modalBtn2" class="button">
-            <img src="https://benjaminrogersart.files.wordpress.com/2021/08/distiction.jpg?w=350" class="buttonImg">
-            <span class="buttonInfo" id="recentDrawings">recent drawings</span> 
-        </li>
-        <li id="modalBtn3" class="button">
-            <img src="https://benjaminrogersart.files.wordpress.com/2021/08/benjaminrogers18.jpg" class="buttonImg">
-            <span class="buttonInfo" id="olderWork">older work</span>
-        </li>
-        <li id="modalBtn4" class="button">
-            <img src="https://benjaminrogersart.files.wordpress.com/2021/08/study.jpeg" class="buttonImg">
-            <span class="buttonInfo" id="studies">studies etc.</span>
-        </li>
-    </ul>
-        
-        <div id="simpleModal" class="modal">
-        <div class="arrow arrow-left"></div>
-            <div class="modal-content">
-                <span class="closeBtn">&times;</span>
-                
-                <!-- Image Grid for the slider -->
-                <div class="slide slide1">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2019/12/critique-2-copy.jpg">
-                    <span class="image-info"><em>THE FINAL CRITIQUE</em></span><br><span class="image-info">watercolor and color pencil on paper</span><br><span class="image-info">42" x 50"</span><br><span class="image-info">2019</span>
-                    </div>
-                </div>
-                <div class="slide slide2">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2019/12/born-storm-dsatrtd-small-1.jpg">
-                    <span class="image-info"><em>THOSE BORN TO THE STORM GROW WEARY OF THE CALM</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">60" x 72"</span><br><span class="image-info">2019</span>
-                    </div>
-                </div>
-                <div class="slide slide3">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2019/11/gentle-art.jpg">
-                    <span class="image-info"><em>THE GENTLE ART OF LEARNING</em></span><br><span class="image-info">watercolor on paper</span><br><span class="image-info">22" x 27"</span><br><span class="image-info">2018</span>
-                    </div>
-                </div>
-                <div class="slide slide4">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/12/3.jpg">
-                    <span class="image-info"><em>WHAT DID I KNOW OF LOVES' AUSTERE AND LONELY OFFICES</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">22" x 27"</span><br><span class="image-info">2016</span>
-                    </div>
-                </div>
-                <div class="slide slide5">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/12/2.jpg">
-                    <span class="image-info"><em>LESSER GRIEFS OF WILD UNREST</em></span><br><span class="image-info">watercolor on paper mounted on panel</span><br><span class="image-info">22" x 27"</span><br><span class="image-info">2016</span>
-                    </div>
-                </div>
-                <div class="slide slide6">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2019/11/4.jpg">
-                    <span class="image-info">study for <em>NATURE, RED IN TOOTH AND CLAW</em></span><br><span class="image-info">watercolor on paper</span><br><span class="image-info">20" x 24"</span><br><span class="image-info">2016</span>
-                    </div>
-                </div>
-                <div class="slide slide7">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2019/12/beast-ii.jpg">
-                    <span class="image-info"><em>BEST NOT TO WAKE A WILD BEAST WAITING DORMANT IN REPOSE</em></span><br><span class="image-info">color pencil and graphite on paper</span><br><span class="image-info">22" x 27"</span><br><span class="image-info">2018</span>
-                    </div>
-                </div>
-                <div class="slide slide8">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/benjaminrogers110.jpg">
-                    <span class="image-info"><em>INSIDE THE PAINTER'S STUDIO: PAINTING IN THE ABBREVIATED FIELD</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">45" x 56"</span><br><span class="image-info">2012</span>
-                    </div>
-                </div>
-                <div class="slide slide9">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/12/1.jpg">
-                    <span class="image-info"><em>RAPT, FROM THE FICKLE TO THE FRAIL</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 42"</span><br><span class="image-info">2017</span>
-                    </div>
-                </div>
-                <div class="slide slide10">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/12/4.jpg">
-                    <span class="image-info"><em>THE MORNING DOESN'T KNOW WHAT THE AFTERNOON HOLDS DEAR</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 52"</span><br><span class="image-info">2014</span>
-                    </div>
-                </div>
-                <div class="slide slide11">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/12/5.jpg">
-                    <span class="image-info"><em>THE PERFECT ROMANCE OF SELF-RELIANCE</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">36" x 38"</span><br><span class="image-info">2014</span>
-                    </div>
-                </div>
-                <div class="slide slide12">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/rogers_benjamin_02.jpg">
-                    <span class="image-info"><em>THE PERFECT ROMANCE OF HIGH MORALITY</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">" x 27"</span><br><span class="image-info">2016</span>
-                    </div>
-                </div>
-                <div class="slide slide13">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/rogers_benjamin_06.jpg">
-                    <span class="image-info"><em>ON THE VANGUARD OF GRAND DELUSION</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 42"</span><br><span class="image-info">2012</span>
-                    </div>
-                </div>
-                <div class="slide slide14">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/rogers_benjamin_07.jpg">
-                    <span class="image-info"><em>THE CRITIQUE OF PURE REASON</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 42"</span><br><span class="image-info">2012</span>
-                    </div>
-                </div>
-                <div class="slide slide15">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2019/12/beast-ii.jpg">
-                    <span class="image-info"><em>BEST NOT TO WAKE A WILD BEAST WAITING DORMANT IN REPOSE</em></span><br><span class="image-info">color pencil and graphite on paper</span><br><span class="image-info">22" x 27"</span><br><span class="image-info">2018</span>
-                    </div>
-                </div>
-                <div class="slide slide16">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/rogers_benjamin_04.jpg">
-                    <span class="image-info"><em>THAT WHICH WE'VE BUILT TOGETHER THROUGHOUT THESE MANY YEARS</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 42"</span><br><span class="image-info">2012</span>
-                    </div>
-                </div>
-                <div class="slide slide17">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/benjaminrogers8.jpg">
-                    <span class="image-info"><em>THE PAST HAS ITS PLACE</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 42"</span><br><span class="image-info">2011</span>
-                    </div>
-                </div>
-                <div class="slide slide18">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/01/benjaminrogers7.jpg">
-                    <span class="image-info"><em>THE HUNGER ARTIST</em></span><br><span class="image-info">oil on canvas</span><br><span class="image-info">35" x 42"</span><br><span class="image-info">2010</span>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow arrow-right"></div>
-        </div>
-        <!--second modal gallery-->
-           
-        <div id="simpleModal2" class="modal2">
-            <div class="arrow arrow-left"></div>
-            <div class="modal-content2">
-                <span class="closeBtn2">&times;</span>
-                <div class="slideA slideA1">
-                    <div class="slide-content">
-                    <img id="drawing1" class="image" src="https://benjaminrogersart.files.wordpress.com/2019/12/img_7305-1-copy.jpg">
-                        <span class="image-info"><em>ON THE THRESHOLD OF DISTINCTIONS</em></span><br><span class="image-info">graphite on paper</span><br><span class="image-info">29" x 35"</span><br><span class="image-info">2014</span>
-                    </div>
-                    </div>
-                    <div class="slideA slideA2">
-                    <div class="slide-content">
-                    <img class="image" src="https://benjaminrogersart.files.wordpress.com/2013/12/13.jpg">
-                    <span class="image-info"><em>LIFE DELIBERATE</em></span><br><span class="image-info">graphite and white color pencil on paper</span><br><span class="image-info">22" x 27"</span><br><span class="image-info">2014</span>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow arrow-right"></div>
-        </div>
-    </section>
-    <section id="aboutSection">
+    </div>
+    <div id="portfolioSection">
+        <ul id="portfolioList">
+            <li><button id="paintingsLink" class="portfolioLinks">
+                <img src='https://benjaminrogersart.files.wordpress.com/2021/08/critique.jpg' id="recentPaintingsLink" class= "button-image">
+                    <span class="buttonInfo">recent painting</span></button></li>
+            <li><button id="drawingsLink" class="portfolioLinks">
+                <img src='https://benjaminrogersart.files.wordpress.com/2021/08/distiction.jpg?w=350' id="recentDrawingsLink" class="button-image">
+                    <span class="buttonInfo">recent drawing</span></button></li>
+            <li><button id="oldWorkLink" class="portfolioLinks">
+                <img src='https://benjaminrogersart.files.wordpress.com/2021/08/benjaminrogers18.jpg' id="olderWorkLink" class="button-image">
+                    <span class="buttonInfo">older work</span></button></li>
+            <li><button id="studiesLink" class="portfolioLinks">
+                <img src="https://benjaminrogersart.files.wordpress.com/2021/08/study.jpeg" id="studiesLink" class="button-image">
+                <span class="buttonInfo">studies</span></button></li>
+        </ul>
+    </div>
+    <div id="aboutSection">
         <img src="https://benjaminrogersart.files.wordpress.com/2020/07/img_9399.jpeg" id="about-photo">
-        <div class="about-paragraph">
+        <div id="about-paragraph">
         <h2>about:</h2>
-        <p class="aboutP">Benjamin is an artist, living and working in Dayton OH. He was previously an Assistant Professor of Art at Red Rocks Community College in Lakewood CO. Currently he would like to encourage everyone that is interested in studying art to do so outside of higher education, and instead take advantage of the vast resources available to you in this technological age and save your money.<br>
+        <p id="aboutP">Benjamin is an artist, living and working in Dayton OH. He was previously an Assistant Professor of Art at Red Rocks Community College in Lakewood CO. Currently he would like to encourage everyone that is interested in studying art to do so outside of higher education, and instead take advantage of the vast resources available to you in this technological age and save your money.<br>
         <p>Benjamin's work follows in the tradition of figurative painting and drawing while accentuating the artifice of paint over adhering to naturalistic realism. His paintings are self-referential contemplations that comment on the intersections of life, art history, philosophy, culture, obsession, and the implications of what it means to be an artist while critiquing and indulging his pitifully naïve and self-centered ego.</p>
         </div>
-    </section>
+    </div>
+    <div id="cvSection">
+        <h2>Artist Cirriculum Vitae</h2>
+        <h3 class="cv-heading">EDUCATION</h3>
+            <p class="resume-item"><strong>MFA /</strong><em> ARIZONA STATE UNIVERSITY </em>2011<br>
+            <strong>BFA /</strong><em> NORTHERN KENTUCKY UNIVERSITY </em> 2007</p> 
+        <h3 class="cv-heading">SOLO EXHIBITIONS</h3>
+            <p class="resume-item">2018 -<em> Where The Body Sits and Learns/</em> DAIRY ARTS CENTER Boulder CO<br>
+            2014 -<em> Critique of Pure Reason/</em> SOO VISUAL ARTS CENTER Minneapolis MN<br>
+            2014 -<em> On the Vanguard of Grand Delusion/</em> PURDUE UNIVERSITY West Lafayette IN<br>
+            2011 -<em> Indecisive Moments/</em> ARIZONA STATE UNIVERSITY Tempe AZ</p>
+        <h3 class="cv-heading">TWO & THREE PERSON EXHIBITIONS</h3>
+        <h3 class="cv-heading">JURIED EXHIBITIONS</h3>
+        <h3 class="cv-heading">GROUP EXHIBITIONS</h3>
+        <h3 class="cv-heading">BIBLIOGRAPHY</h3>
+        <h3 class="cv-heading">PROFESSIONAL ACTIVITIES</h3>
+        <h3 class="cv-heading">AWARDS & DISTINCTIONS</h3>
+        <h3 class="cv-heading">PUBLIC ART PROJECTS</h3>
+        <h3 class="cv-heading">TEACHING EXPERIENCE</h3>
+        <h3 class="cv-heading">COMMUNITY EDUCATION</h3>
+        
+    </div>
+    <div id="contactSection">
+        <img src='https://benjaminrogersart.files.wordpress.com/2020/07/img_6264.jpg' class="contact-photo">
+        <p>contact me at <strong>benjaminrogersart@gmail.com</strong><br>
+        social media links:</p>
+    </div>
+    <div id="currentPaintingLightBox" class="light-box">
+        <div class="main-image">
+            <img src="https://benjaminrogersart.files.wordpress.com/2019/12/critique-2-copy.jpg" id="currentP-img">
+            <p id="current-image-info"><em>THE FINAL CRITIQUE</em><br>
+                watercolor and color pencil on paper<br>
+                42" x 50"</span><br>
+                2019</p>
+        </div>
+        <div class="images">
+            <img src="https://benjaminrogersart.files.wordpress.com/2019/12/born-storm-dsatrtd-small-1.jpg">
+            <img src="https://benjaminrogersart.files.wordpress.com/2019/11/gentle-art.jpg">
+            <img src="https://benjaminrogersart.files.wordpress.com/2013/12/3.jpg">        
+        </div>
+    </div>
+    <div id="currentDrawingLightBox" class="light-box">
+        <div class="main-image">
+
+        </div>
+    </div>
+    <div id="olderWorkLightBox" class="light-box">
+        <div class="main-image">
+
+        </div>
+    </div>
+    <div id="studiesLightBox" class="light-box">
+        <div class="main-image">
+
+        </div>
+    </div>
+    
 </body>
 </html>
