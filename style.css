@@ -1,211 +1,257 @@
 /** page wide elements **/
-*{
-    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-}
-h1{
-    font-size: 4rem;
-    padding-left:.5%;
-    position: fixed;
-}
-#heading{
-    position: fixed;
-    width: 100%;
-    height: 150px;
-    background-color: white;
-    z-index: 2;
-    opacity: 1;
-    top:0;
-    left:0;
-}
-.main-image img{
-    margin-top: 3%;
-    margin-left: 3%;
-    width: 67%;
-}
-.main-image p{
-    float: right;
-}
-.p-images img,
-.d-images img,
-.o-images img,
-.s-images img{
-    width: 100%;
-    cursor: pointer;
-}
-.p-images,
-.d-images,
-.o-images,
-.s-images{
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 1%;
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 5px;
-}
-.light-box{
-    width: 80vw;
-    height: 83vh;
-    background-color:white;
-}
-.current-image-info{
-    font-size: 1.4vw;
-}
+   *{
+        font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    }
+    h1{
+        font-size: 4rem;
+        padding-left:.5%;
+        position: fixed;
+    }
+    #heading{
+        position: fixed;
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        z-index: 2;
+        opacity: 1;
+        top:0;
+        left:0;
+    }
+    .main-image img{
+        margin-top: 0;
+        margin-left: 0;
+        width: 90%;
+    }
+    #paintingImageInfo,
+    #drawingImageInfo{
+        margin-top: 2%;
+        margin-left: 2%;
+        font-size: 1.5vw;
+    }
+    .image-info{
+        visibility: hidden;
+        position: absolute;
+    }
+    .p-images img,
+    .d-images img,
+    .o-images img,
+    .s-images img{
+        width: 100%;
+        cursor: pointer;
+    }
+    .p-images,
+    .d-images,
+    .o-images{
+        margin-right: 9%;
+        margin-top: 0;
+        width: 60%;
+        display: grid;
+        grid-template-columns:50% 50%;
+        grid-row-gap: 5px;
+        grid-gap: 5px;
+    }
+    .s-images{
+        margin-right: 4%;
+        margin-top: 0;
+        width: 60%;
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        
+        grid-gap: 5px;
+    }
+    .light-box{
+        width: 85vw;
+        display: flex;
+        justify-content:space-around;
+        height: 83vh;
+        background-color:white;
+    }
+    .current-image-info{
+        font-size: 1.4vw;
+    }
 /** Page Navigation **/
-.links{
-    position: fixed;
-    margin-top: 150px;
-    list-style-type: none;
-    text-decoration: none;
-}
-.navLinks{
-    border: none;
-    background: none;
-    font-size: 1em;
-}
-.navLinks:hover{
-    cursor: pointer;
-}
+    .links{
+        position: fixed;
+        margin-top: 150px;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .navLinks{
+        border: none;
+        background: none;
+        font-size: 1em;
+    }
+    .navLinks:hover{
+        cursor: pointer;
+    }
 
 /**portfolio grid**/
-#portfolioList{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-row-gap: 30px;
-    grid-column-gap: 40px;
-}
-#portfolioSection{
-    position: absolute;
-    visibility: visible;
-    margin-top: 150px;
-    margin-left: 200px;
-    max-width: 850px;
-}
-.portfolioLinks{
-    text-align: center;
-    color: transparent;
-    font-size: 3vw;
-    font-weight: 700;
-    max-width: 450px;
-    border: none;
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.buttonInfo{
-    position: absolute;
-    margin:0;
-}
-#recentPaintingsLink{
-    width: 24vw;
-    height: 20vw;
-    max-width: 350px;
-    max-height: 290px;
-}
-#recentDrawingsLink{
-    width: 24vw;
-    height: 20vw;
-    max-width: 350px;
-    max-height: 292px;
-}
-#olderWorkLink{
-    width: 30vw;
-    height: 20vw;
-    max-width: 350px;
-    max-height: 232px;
-}
-#studiesLink{
-    width: 24vw;
-    height: 20vw;
-    max-width: 350px;
-    max-height: 290px;
-}
-#portfolioList li:hover .button-image{
-    opacity: .5;
-    cursor: pointer;
-}
-#portfolioList .portfolioLinks:hover .buttonInfo{
-    color: black;
-}
-.buttonInfo:hover{
-    cursor: pointer;
-}
-
-/* about section */
-#about-paragraph{
-    margin-top: 50px;
-    margin-left: 200px;
-    width: 70vw;
-    max-width: 950px;
-}
-#aboutSection{
-    visibility: hidden;
-}
-#about-photo{
-    position: relative;
-    width: 60%;
-    margin-top: 150px;
-    margin-left: 200px;
-}
-
-#cvSection{
-    visibility: hidden;
-    position: absolute;
-    top: 150px;
-    left: 200px;
-}
-
-/* contact section */
-#contactSection{
-    visibility: hidden;
-    position: absolute;
-    top: 150px;
-    left: 200px;
-    font-size: 1.2em;
-}
-.contact-photo{
-    position: relative;
-    width: 72%;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-/*current paintings gallery */
-#currentPaintingLightBox{
-    visibility: hidden;
-    position: absolute;
-    top: 150px;
-    left: 180px;
-}
-
-
-/*current drawings gallery*/
-#currentDrawingLightBox{
-    visibility: hidden;
-    position: absolute;
-    top: 150px;
-    left: 180px;
-}
-/*older work gallery*/
-#olderWorkLightBox{
-    visibility: hidden;
-    position: absolute;
-    top: 150px;
-    left: 180px;
-}
-/*studies gallery*/
-#studiesLightBox{
-    visibility: hidden;
-    position: absolute;
-    top: 150px;
-    left: 180px;
-}
-/**media queries**/
-@media only screen and (min-width: 1425px){
-    .buttonInfo{
-        font-size: 30pt;
+    #portfolioList{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 30px;
+        grid-column-gap: 40px;
     }
-}
+    #portfolioSection{
+        position: absolute;
+        visibility: visible;
+        margin-top: 150px;
+        margin-left: 200px;
+        max-width: 850px;
+    }
+    .portfolioLinks{
+        text-align: center;
+        color: transparent;
+        font-size: 3vw;
+        font-weight: 700;
+        max-width: 450px;
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttonInfo{
+        position: absolute;
+        margin:0;
+    }
+    #recentPaintingsLink{
+        width: 24vw;
+        height: 20vw;
+        max-width: 350px;
+        max-height: 290px;
+    }
+    #recentDrawingsLink{
+        width: 24vw;
+        height: 20vw;
+        max-width: 350px;
+        max-height: 292px;
+    }
+    #olderWorkLink{
+        width: 30vw;
+        height: 20vw;
+        max-width: 350px;
+        max-height: 232px;
+    }
+    #studiesWorkLink{
+        width: 24vw;
+        height: 20vw;
+        max-width: 350px;
+        max-height: 290px;
+    }
+    #portfolioList li:hover .button-image{
+        opacity: .5;
+        cursor: pointer;
+    }
+   #portfolioList .portfolioLinks:hover .buttonInfo{
+        color: black;
+    }
+    .buttonInfo:hover{
+        cursor: pointer;
+    }
+
+    /* about section */
+    #about-paragraph{
+        margin-top: 50px;
+        margin-left: 200px;
+        width: 70vw;
+        max-width: 950px;
+    }
+    #aboutSection{
+        visibility: hidden;
+    }
+    #about-photo{
+        position: relative;
+        width: 60%;
+        margin-top: 150px;
+        margin-left: 200px;
+    }
+
+    #cvSection{
+        visibility: hidden;
+        position: absolute;
+        top: 150px;
+        left: 200px;
+    }
+
+    /* contact section */
+    #contactSection{
+        visibility: hidden;
+        position: absolute;
+        top: 150px;
+        left: 200px;
+        font-size: 1.2em;
+    }
+    .contact-photo{
+        position: relative;
+        width: 72%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    /*current paintings gallery */
+    #currentPaintingLightBox{
+        visibility: hidden;
+        position: absolute;
+        top: 150px;
+        left: 180px;
+    }
+    
+   /*current drawings gallery*/
+   #currentDrawingLightBox{
+        visibility: hidden;
+        position: absolute;
+        top: 150px;
+        left: 180px;
+   }
+   /*older work gallery*/
+   #olderWorkLightBox{
+        visibility: hidden;
+        position: absolute;
+        top: 150px;
+        left: 180px;
+   }
+   /*studies gallery*/
+   #studiesLightBox{
+        visibility: hidden;
+        position: absolute;
+        top: 150px;
+        left: 180px;
+   }
+    /**media queries**/
+    @media only screen and (min-width: 1425px){
+        .buttonInfo{
+            font-size: 30pt;
+        }
+    }
+    @media only screen and (min-width: 1300px){
+        .p-images,
+        .d-images,
+        .o-images{
+            margin-left: 5%;
+            margin-top: 0;
+            width: 60%;
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-gap: 5px;
+        }
+        .s-images{
+            margin-right: 4%;
+            margin-left: 5%;
+            margin-top: 0;
+            width: 60%;
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-gap: 5px;
+        }
+        .main-image img{
+            width: 750px;
+        }
+        #paintingImageInfo,
+        #drawingImageInfo{
+            margin-top: 2%;
+            margin-left: 2%;
+            font-size: 20px;
+        }
+    }   
